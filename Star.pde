@@ -1,4 +1,4 @@
-class Star //note that this class does NOT extend Floater
+ class Star //note that this class does NOT extend Floater
 {
   private double myX, myY,mySize;
   private int myColor;
@@ -6,7 +6,7 @@ class Star //note that this class does NOT extend Floater
     myX=(Math.random()*400-200);
     myY=(Math.random()*400-200);
     mySize=(int)(Math.random()*4+2);
-    myColor = color((int)(Math.random()*255), (int)(Math.random()*150), (int)(Math.random()*255), 150);
+    myColor = color((int)(Math.random()*205+50), (int)(Math.random()*150), (int)(Math.random()*205+50), 150);
   } 
 
   public void show() {
