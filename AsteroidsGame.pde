@@ -29,8 +29,8 @@ public void draw()
    for (int i = 0; i<rock.size(); i++) {
     rock.get(i).move();
     rock.get(i).show();
-    float d = dist(spacey.getX(), spacey.getY(), rocks.get(i).getX(), rocks.get(i).getY());
-    if (d<15) {
+    double d = dist(spacey.getX(), spacey.getY(), rock.get(i).getX(), rock.get(i).getY());
+    if (d<24) {
       rock.remove(i);
     }
   }
