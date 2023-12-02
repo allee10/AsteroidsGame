@@ -1,5 +1,6 @@
 Star[] bubbles = new Star[100];
 Spaceship spacey = new Spaceship();
+ArrayList <Asteroids> rock = new ArrayList <Asteroids>();
 public void setup() 
 {
   background(0);
@@ -8,6 +9,9 @@ public void setup()
   for (int i = 0; i<bubbles.length; i++) {
     bubbles[i] = new Star();
   }
+  for (int i =0; i<7;i++){
+    rock.add(new Asteroids());
+  }
 }
 public void draw() 
 {
@@ -15,9 +19,20 @@ public void draw()
   noStroke();
   spacey.move();
   spacey.show();
-  translate(200, 200);
   for (int i = 0; i<bubbles.length; i++) {
     bubbles[i].show();
+  }
+  for (int i =0; i<rock.size();i++){
+    rock.get(i).show();
+    rock.get(i).move();
+  }
+   for (int i = 0; i<rock.size(); i++) {
+    rock.get(i).move();
+    rock.get(i).show();
+    float d = dist(spacey.getX(), spacey.getY(), rocks.get(i).getX(), rocks.get(i).getY());
+    if (d<15) {
+      rock.remove(i);
+    }
   }
 }
 public void keyPressed() {
