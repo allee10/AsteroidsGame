@@ -5,7 +5,7 @@ class Spaceship extends Floater
     xCorners = new int[corners];
     yCorners = new int[corners];
     xCorners[0] = -4;
-    yCorners[0] = 3;
+    yCorners[0] = 2;
     xCorners[1] = 0;
     yCorners[1] = 6;
     xCorners[2] = 16;
@@ -13,7 +13,7 @@ class Spaceship extends Floater
     xCorners[3] = 0;
     yCorners[3] = -6;
     xCorners[4] = -4;
-    yCorners[4] = -3;
+    yCorners[4] = -2;
     myColor = color(255, 255, 255);
     myCenterX = 200;
     myCenterY = 200;
@@ -34,4 +34,8 @@ class Spaceship extends Floater
     myYspeed = 0;
     myPointDirection = (Math.random()*360);
   }
+  public double getPointDirection(){
+    return myPointDirection;
+}
+
 }
