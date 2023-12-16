@@ -11,7 +11,7 @@ public void setup()
   for (int i = 0; i<bubbles.length; i++) {
     bubbles[i] = new Star();
   }
-  for (int i =0; i<7;i++){
+  for (int i =0; i<10;i++){
     rock.add(new Asteroids());
   }
 }
